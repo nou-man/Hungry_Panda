@@ -77,6 +77,12 @@
       href="{{url_for('static',filename='css/login.css')}}"
       rel="stylesheet"
     />
+
+    <!-- Order CSS -->
+    <link
+      href="{{url_for('static',filename='css/order.css')}}"
+      rel="stylesheet"
+    />
     <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
@@ -92,9 +98,7 @@
     <div>
       <div class="navbar navbar-expand-lg bg-light navbar-light">
         <div class="container-fluid">
-          <a href="index.html" class="navbar-brand"
-            >Hungry <span>Panda</span></a
-          >
+          <a href="/" class="navbar-brand">Hungry <span>Panda</span></a>
           <button
             type="button"
             class="navbar-toggler"
@@ -109,13 +113,28 @@
             id="navbarCollapse"
           >
             <div class="navbar-nav ml-auto">
-              <a href="/" class="nav-item nav-link active">Home</a>
-              <a href="/about" class="nav-item nav-link">About</a>
+              <a id="main" href="{{ url_for('main')}}" class="nav-item nav-link"
+                >Home</a
+              >
+              <a
+                id="about"
+                href="{{ url_for('about')}}"
+                class="nav-item nav-link }}"
+                >About</a
+              >
               <!-- <a href="feature.html" class="nav-item nav-link">Feature</a> -->
-              <a href="/menu" class="nav-item nav-link">Menu</a>
+              <!-- <a id="menu" href="{{ url_for('menu')}}" class="nav-item nav-link"
+                >Menu</a
+              > -->
               <!-- <a href="/team" class="nav-item nav-link">Chef</a> -->
-              <a href="/order" class="nav-item nav-link">Order Now</a>
-              <div class="nav-item dropdown">
+              <a
+                id="order"
+                href="{{ url_for('order')}}"
+                class="nav-item nav-link"
+                >Order Now</a
+              >
+
+              <!-- <div class="nav-item dropdown">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
@@ -126,8 +145,19 @@
                   <a href="/blog" class="dropdown-item">Blog Grid</a>
                   <a href="single.html" class="dropdown-item">Blog Detail</a>
                 </div>
-              </div>
-              <a href="/contact" class="nav-item nav-link">Contact</a>
+              </div> -->
+
+              <a
+                id="contact"
+                href="{{ url_for('contact')}}"
+                class="nav-item nav-link"
+                >Contact</a
+              >
+              <a
+                id="login-button-nav"
+                href="{{ url_for('login')}}"
+                class="nav-item nav-link" style="color: white;"
+              >Login</a>
             </div>
           </div>
         </div>
@@ -220,7 +250,6 @@
     <script src="{{url_for('static',filename='mail/jqBootstrapValidation.min.js')}}"></script>
     <script src="{{url_for('static',filename='mail/contact.js')}}"></script>
 
-    
     <script src="{{url_for('static',filename='mail/contact.js')}}"></script>
     <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -230,5 +259,10 @@
 
     <!-- Template Javascript -->
     <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    <script>
+      $(document).ready(function () {
+        $("#{{request.endpoint}}").addClass("active");
+      });
+    </script>
   </body>
 </html>

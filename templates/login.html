@@ -1,30 +1,29 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %} {% block body %}
+<div class="login_empty_space">
+  <div id="login-form">
+    <h1 id="h1">Login</h1>
+    <form id="form">
+      <label id="label" for="username">Username:</label><br />
+      <input type="text" id="username" name="username" /><br />
+      <label id="label" for="password">Password:</label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+      <button type="submit">Submit</button>
+      <button type="button" onclick="toggleForm()">Sign Up</button>
+    </form>
+  </div>
 
-{% block body %}
-<div id="login-form">
-  <h1 id="h1">Login</h1>
-  <form id="form">
-    <label id="label" for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label id="label" for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <button type="submit">Submit</button>
-    <button type="button" onclick="toggleForm()">Sign Up</button>
-  </form> 
+  <div id="signup-form" style="display: none">
+    <h1 id="h1">Sign Up</h1>
+    <form id="form">
+      <label id="label" for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br />
+      <label id="label" for="username">Username:</label><br />
+      <input type="text" id="username" name="username" /><br />
+      <label id="label" for="password">Password:</label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+      <button type="submit">Submit</button>
+      <button type="button" onclick="toggleForm()">Login</button>
+    </form>
+  </div>
 </div>
-
-<div id="signup-form" style="display: none;">
-  <h1 id="h1">Sign Up</h1>
-  <form id="form">
-    <label id="label" for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label id="label" for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label id="label" for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <button type="submit">Submit</button>
-    <button type="button" onclick="toggleForm()">Login</button>
-  </form> 
-</div>
-
 {% endblock %}

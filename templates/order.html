@@ -1,5 +1,285 @@
-{% extends 'base.html' %}
-{% block body %}
+{% extends 'base.html' %} {% block body %}
+<div class="food-shopping-website">
+  <h1 class="head-order">Discover the best food & drinks in Mangaluru</h1>
+  <p class="head-order">Shop for your favorite foods and ingredients below:</p>
 
+  <!-- Display products in a grid using a flex container -->
+  <div class="products-grid" style="display: flex; flex-wrap: wrap">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/mojo_pizza.avif')}}" alt="Product 1" />
+      <div class="product-card-info">
+        <div class="product-card-name">Mojo Pizza</div>
+        <div class="product-card-price">&#8377; 249</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/paneer_peppy_pizza.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Paneer Peppy Pizza</div>
+        <div class="product-card-price">&#8377; 299</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/jalapenos_pizza.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Jalapenos Pizza</div>
+        <div class="product-card-price">&#8377; 445</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/chicken_tikka_masala_roll.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Chicken Tikka Masala Roll</div>
+        <div class="product-card-price">&#8377; 199</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/spicy_chicken_wrap.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Spicy Chicken Wrap</div>
+        <div class="product-card-price">&#8377; 220</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/veg_schezwan_noodle_roll.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Veg Schezwan Noodle Roll</div>
+        <div class="product-card-price">&#8377; 149</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/mc_aloo_tikki.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">MC Aloo Tikki</div>
+        <div class="product-card-price">&#8377; 58</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/tandoori_crunch_chicken_burger.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Tandoori Crunch Chicken Burger</div>
+        <div class="product-card-price">&#8377; 169</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/tandoori_zinger.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Tandoori Zinger</div>
+        <div class="product-card-price">&#8377; 349</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/mc_saver_mc_chicken_meal.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">MC Saver MC Chicken Meal</div>
+        <div class="product-card-price">&#8377; 305</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 11 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/jumbo_shawarma.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Jumbo Shawarma</div>
+        <div class="product-card-price">&#8377; 88</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 12 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/chicken_fried_rice.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Chicken Fried Rice</div>
+        <div class="product-card-price">&#8377; 220</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 13 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/curd_rice.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Curd Rice</div>
+        <div class="product-card-price">&#8377; 99</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 15 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/double_egg_fried_rice.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Double Egg Fried Rice</div>
+        <div class="product-card-price">&#8377; 160</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 16 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/special_masala_dosa.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Special Masala Dosa</div>
+        <div class="product-card-price">&#8377; 80</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 17 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/grilled_chicken.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Grilled Chicken</div>
+        <div class="product-card-price">&#8377; 290</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 18 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/chilli_chicken.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Chilli Chicken</div>
+        <div class="product-card-price">&#8377; 160</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 19 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/chocolate_lassi.avif')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Mango Lassi</div>
+        <div class="product-card-price">&#8377; 120</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 20 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/raw_pressey_alphonso_mango_juice.webp')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Raw Pressrey Alphonso Mango Juice</div>
+        <div class="product-card-price">&#8377; 99</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 21 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/raw_pressery_mixed_fruit.webp')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Raw Pressrey Mixed Fruit Juice</div>
+        <div class="product-card-price">&#8377; 110</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Product 22 -->
+    <div class="product-card">
+      <img src="{{url_for('static',filename='img/products/albanian_grape_juice.webp')}}" alt="Product 2" />
+      <div class="product-card-info">
+        <div class="product-card-name">Albanian Grape Juice</div>
+        <div class="product-card-price">&#8377; 99</div>
+        <!-- Add to cart button -->
+        <button class="btn-yellow">Add to Cart</button>
+        <!-- Buy now button -->
+        <button class="btn-yellow">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Add additional product cards here -->
+  </div>
+</div>
 
 {% endblock %}

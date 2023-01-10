@@ -1,0 +1,62 @@
+.food-shopping-website {
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+/* Add styling for yellow buttons */
+.btn-yellow {
+  background-color: hsla(32, 100%, 50%, 0.79);
+  /* background-color: #ffeb3b; */
+  color: #000000;
+  border: none;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+/* Add fancy styling for product cards */
+.product-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+  /* background-color: hsla(32, 100%, 50%, 0.79); */
+  background-color: #fff44f;
+  width: 300px;
+  margin: 10px;
+  margin-right: 100px;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card-info {
+  padding: 20px;
+}
+
+.product-card-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.product-card-price {
+  font-size: 18px;
+  color: #000000;
+}
+
+.head-order{
+  color: white;
+}
